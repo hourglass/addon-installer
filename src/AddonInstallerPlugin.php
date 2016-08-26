@@ -8,6 +8,12 @@ use Composer\Plugin\PluginInterface;
 
 class AddonInstallerPlugin implements PluginInterface
 {
+    /**
+     * Apply plugin modifications to Composer
+     *
+     * @param Composer    $composer
+     * @param IOInterface $io
+     */
     public function activate(Composer $composer, IOInterface $io)
     {
         $installer = new AddonInstaller($io, $composer);
