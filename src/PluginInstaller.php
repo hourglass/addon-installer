@@ -5,14 +5,14 @@ namespace Hourglass\Composer;
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 
-class AddonInstaller extends LibraryInstaller
+class PluginInstaller extends LibraryInstaller
 {
     /**
      * {@inheritDoc}
      */
     public function getInstallPath(PackageInterface $package)
     {
-        return 'addons/' . $package->getPrettyName();
+        return 'plugins/' . $package->getPrettyName();
     }
 
     /**
@@ -20,6 +20,6 @@ class AddonInstaller extends LibraryInstaller
      */
     public function supports($packageType)
     {
-        return 'hourglass-addon' === $packageType;
+        return 'hourglass-plugin' === $packageType;
     }
 }

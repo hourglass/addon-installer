@@ -1,12 +1,12 @@
 {
-  "name": "hourglass/addon-installer",
+  "name": "hourglass/composer-plugin-installer",
   "type": "composer-plugin",
   "license": "MIT",
   "autoload": {
     "psr-4": { "Hourglass\\Composer\\": "src" }
   },
   "extra": {
-    "class": "Hourglass\\Composer\\AddonInstallerPlugin"
+    "class": "Hourglass\\Composer\\PluginInstallerPlugin"
   },
   "require": {
     "composer-plugin-api": "^1.0"
